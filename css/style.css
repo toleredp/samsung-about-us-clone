@@ -16,14 +16,14 @@ body {
 
 /* Navbar */
 
-.nav-bar {
+.main-nav {
   display: flex;
   flex-flow: nowrap row;
   align-items: center;
   height: 80px;
 }
 
-.nav-bar a {
+.main-nav a {
   font-size: 12px;
   font-weight: bold;
   color: #000;
@@ -41,15 +41,15 @@ body {
 }
 
 /* Navbar-left-menu */
-.left-menu {
+.main-menu {
   flex: 3;
 }
 
-.left-menu ul {
+.main-menu ul {
   display: flex;
 }
 
-.left-menu a:hover,
+.main-menu a:hover,
 .right-menu a:hover {
   background-color: #000;
   color: #fff;
@@ -72,6 +72,17 @@ body {
   font-size: 20px;
   cursor: pointer;
 }
+
+/* Navbar-burger-menu */
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  z-index: 2;
+  display: none;
+}
+
 /* SHOWCASE */
 .showcase {
   width: 100%;
@@ -95,4 +106,78 @@ body {
   margin-bottom: 10px;
   color: #fff;
   font-weight: bold;
+}
+
+/* Responsiveness */
+@media (max-width: 1000px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+  .right-menu,
+  .btn-menu {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+
+  /* .main-menu,
+  .right-menu,
+  .btn-menu {
+    display: none;
+  } */
+
+  .main-nav ul,
+  .main-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+    width: 100%;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    opacity: 0.9;
+    padding: 30px;
+    transform: translateX(-500px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .main-nav ul,
+  .main-menu li {
+    padding: 10px;
+    border-bottom: #ccc solid 1px;
+    font-size: 14px;
+  }
+
+  .main-nav ul,
+  .main-menu li:last-child {
+    border-bottom: 0;
+  }
+
+  .main-nav ul,
+  .main-menu.show {
+    transform: translateX(0px);
+  }
+
+  .showcase h1 {
+    font-size: 30px;
+    width: 75%;
+  }
+
+  .showcase p {
+    width: 75%;
+  }
 }
