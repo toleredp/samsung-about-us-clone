@@ -1,0 +1,25 @@
+@media all and (max-width: 1000px) {
+    .col-section {
+        flex-wrap: wrap;
+
+    }
+    .flex-img-work-article-col-section {
+       
+        margin: 5px;
+    }
+}
+
+@media all and (max-width: 670px) {
+    .menu-icon {
+        display: block;
+      }
+    .col-section {
+       flex-direction: column;
+    }
+    .flex-img-work-article-col-section {
+        width: 50%;
+    }
+    .flex-img-work-article-col-section:active {
+        transform: scale(0.2);
+    }
+}
